@@ -190,7 +190,7 @@ public class stackB {
         // printStack(s);
         // // 1, 2, 3
 
-        // L8
+        // Lecture 8
         int stocks[] = { 100, 80, 60, 70, 60, 85, 100 };
         int span[] = new int[stocks.length];
         stockSpan(stocks, span);
