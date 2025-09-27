@@ -265,6 +265,42 @@ public class queuesB {
         }
     }
 
+    // ! L13 Implement stack using Deque
+    // public class stackDeque {
+    // // Declarea and initialize ArrayDeque in java
+    // Deque<Integer> deque = new LinkedList<>();
+
+    // // making 3 operations methods
+    // public void push(int data) {
+    // deque.addLast(data);
+    // }
+
+    // public int pop() {
+    // return deque.removeLast();
+    // }
+
+    // public int peek() {
+    // return deque.getLast();
+    // }
+    // }
+
+    // ! L14 Implement Queue using Deque
+    static class Queue {
+        Deque<Integer> deque = new LinkedList<>();
+
+        public void add(int data) {
+            deque.addLast(data);
+        }
+
+        public int remove() {
+            return deque.removeFirst();
+        }
+
+        public int peek() {
+            return deque.getFirst();
+        }
+    }
+
     public static void main(String[] args) {
         // ! LECTURE : 4, 5
         // todo ***Calling q.display() But Queue (interface) doesn't have display method
@@ -328,12 +364,49 @@ public class queuesB {
         // System.out.println();
         // }
 
-        reverse(q);
-        // print Q
-        while (!q.isEmpty()) {
-            System.out.print(q.remove() + " ");
-        }
+        // L11
+        // reverse(q);
+        // // print Q
+        // while (!q.isEmpty()) {
+        // System.out.print(q.remove() + " ");
+        // }
 
-        System.out.println();
+        // System.out.println();
+
+        // L11 Deque
+        // Deque<Integer> deque = new LinkedList<>();
+        // deque.addFirst(1); // 1
+        // deque.addFirst(2); // here we are adding on front side thats why wee got 2 in
+        // oth plac
+        // deque.addLast(30);
+        // deque.addLast(40);
+        // System.out.println(deque);
+        // deque.removeLast();
+        // System.out.println(deque);
+        // System.out.println("first element = " + deque.getFirst());
+
+        // L13
+        // creating an object stack s
+        // Stack s = new Stack();
+        // s.push(1);
+        // s.push(2);
+        // s.push(3);
+        // System.out.println("peek = " + s.peek());// peek shows top element but doen't
+        // remove
+        // System.out.println(s.pop()); // phalai 3
+        // System.out.println(s.pop());
+        // System.out.println(s.pop());
+
+        // L14
+        Queue q = new Queue();
+        q.add(1);
+        q.add(2);
+        q.add(3);
+
+        System.out.println("peek(top element checking) : " + q.peek());
+        System.out.println(q.remove()); // yha front sai remove hoga 1
+        System.out.println(q.remove());
+        System.out.println(q.remove());
+
     }
 }
